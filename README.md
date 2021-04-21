@@ -6,9 +6,9 @@ This repositry contains Semester wise Notes, Experiments and its Codes in a prop
 
 For all those enthusiast MU CS Engineer pusruing Bachelors , I hope this repsoitry helps you in easing your academic work .
 
-# Please fork and star the repositry as much as possible
+# Please fork and star the repositry as much as possible !!
 
-In order to contact me please see my profile page
+In order to contact me please see my github profile page
 
 # Update
 
