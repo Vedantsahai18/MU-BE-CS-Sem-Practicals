@@ -1,0 +1,143 @@
+Experiment 3
+
+Task 1
+create table client_master(
+clientno varchar(6),
+name varchar(20),
+address varchar(30),
+city varchar(15),
+pincode numeric(8),
+state varchar(15),
+balance numeric(10,2)
+)
+create table Product_master(
+product_no varchar(6),
+description varchar(15),
+Profit_percent numeric(4,2),
+Unit_measure varchar(10),
+Qty_on_hand numeric(8),
+Reorder_level numeric(8),
+Sell_price numeric(8,2),
+Cost_price numeric(8,2)
+)
+insert into client_master values('123','abc','cba','a',10,'b',100)
+insert into client_master values('456','def','fed','c',20,'d',200)
+insert into client_master values('789','ghi','ihg','e',30,'f',300)
+insert into client_master values('012','jkl','lkj','g',40,'h',400)
+insert into client_master values('345','mno','onm','i',50,'j',500)
+insert into client_master values('345','mno','onm','mumbai',50,'j',500)
+
+insert into Product_master values('567','hello',50,'unit',60,70,200,100)
+insert into Product_master values('890','world',60,'unit2',70,80,300,200)
+insert into Product_master values('678','hi',70,'unit3',80,90,400,300)
+insert into Product_master values('645','bye',80,'unit4',90,100,500,400)
+insert into Product_master values('876','goodbye',90,'unit5',100,110,600,500)
+
+select name from client_master
+select * from client_master
+select name,city from client_master
+select * from Product_master
+select * from client_master where city='mumbai'
+update client_master set city='mumbai' where clientno='456'
+update client_master set balance=1000 where clientno='456'
+update Product_master set Cost_price=560 where description='hi'
+delete from Product_master where Qty_on_hand<70
+delete from client_master where state='d'
+
+select * from client_master
+select * from Product_master
+
+Task 2
+create table Library(
+material varchar(60),
+countmat int
+)
+insert into Library values("Books",50)
+insert into Library values("CD's",20)
+insert into Library values("Magazines",20)
+select * from Library
+
+create table Member(
+name varchar(50),
+memid numeric(10),
+dept varchar(20)
+)
+insert into Member values("Abc",210,"Computers")
+insert into Member values("Def",211,"Electronics")
+insert into Member values("Ghi",212,"Info.Tech")
+select * from Member
+
+create table Student(
+sid numeric(10),
+rollno numeric(10),
+class varchar(20),
+course varchar(20)
+)
+insert into Student values(188,12,"TE Computers","Computers")
+insert into Student values(189,13,"TE Computers","Computers")
+insert into Student values(190,14,"TE Computers","Computers")
+select * from Student
+
+create table Teacher(
+tid numeric(10),
+enrollno numeric(10),
+dept varchar(20)
+)
+insert into Teacher values(121,13423,"Computers")
+insert into Teacher values(122,13424,"Info.Tech")
+insert into Teacher values(123,13425,"Production")
+select * from Teacher
+
+create table Staff(
+stid numeric(10),
+dept varchar(50)
+)
+insert into Staff values(131,"Computers")
+insert into Staff values(132,"Info.Tech")
+select * from Staff
+
+create table Material(
+mid numeric(10),
+type varchar(50),
+qty int
+)
+insert into Material values(141,"Books",19)
+insert into Material values(142,"Cds",16)
+insert into Material values(143,"Magazines",11)
+select * from Material
+
+create table Books(
+bid numeric(10),
+bname varchar(50),
+qty int,
+publisher varchar(20)
+)
+insert into Books values(45,"DBMS",5,"Techmax")
+insert into Books values(46,"CN",8,"Technical")
+insert into Books values(47,"AA",6,"Coreman")
+select * from Books
+
+create table CDs(
+cid numeric(10),
+cdname varchar(50),
+qty int,
+publisher varchar(20)
+)
+insert into CDs values(55,"AWS",9,"Amazon")
+insert into CDs values(56,"Servlet",4,"Java")
+insert into CDs values(57,"OCPJP",3,"Oracle")
+select * from CDs
+
+create table Magazines(
+mid numeric(10),
+magname varchar (50),
+qty int,
+publisher varchar(20)
+}
+insert into Magazines values(65,"Fragmag1",7,"Abc")
+insert into Magazines values(66,"Fragmag2",3,"Pqr")
+insert into Magazines values(67,"Fragmag3",1,"Lmn")
+select * from Magazines
+
+
+

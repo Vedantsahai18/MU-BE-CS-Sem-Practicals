@@ -1,0 +1,55 @@
+div {
+  background: 0%;
+ 
+}
+
+/* Style inputs with type="text", select elements and textareas */
+.head{
+  font-size: 20px;
+  width:50px;
+}
+.head1{
+  font-size: 20px;
+  padding: 10px 15px;
+  border:5px solid rgb(68, 68, 68) ;
+  border-radius: 10px;
+  position: relative;
+  margin-left:45%;
+  text-align: center;
+
+}
+.head1:hover{
+  background-color: #fffb00;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.head2{
+  font-size: 20px;
+  width: 50%; /* Full width */
+  padding: 5px; /* Some padding */  
+  border: 2px solid grey; /* Gray border */
+  border-radius: 10px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+.input[type=text], select, textarea {
+  font-size: 20px;
+  width: 100%; /* Full width */
+  padding: 5px; /* Some padding */  
+  border: 2px solid grey; /* Gray border */
+  border-radius: 10	px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 10px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: rgb(215, 249, 250);
+  padding: 50px;
+ margin-left: 100px;
+ margin-right: 100px;
+}

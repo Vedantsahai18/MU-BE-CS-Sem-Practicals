@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="games">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="game" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" maxOccurs="unbounded" type="xs:string"/>
+                            <xs:element name="developer" maxOccurs="unbounded" type="xs:string"/>
+                            <xs:element name="year" maxOccurs="unbounded" type="xs:positiveInteger"/>
+                            <xs:element name="price" maxOccurs="unbounded" type="xs:decimal"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="person" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

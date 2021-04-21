@@ -1,0 +1,7 @@
+<!ELEMENT games (game+)>
+<!ATTLIST games person CDATA #REQUIRED>  
+<!ELEMENT game (title, developer, year, price)>  
+<!ELEMENT title (#PCDATA)>  
+<!ELEMENT developer (#PCDATA)>
+<!ELEMENT year (#PCDATA)>  
+<!ELEMENT price (#PCDATA)>

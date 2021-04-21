@@ -1,0 +1,74 @@
+Experiment 5
+
+
+Task 1
+
+--1
+create table company1(
+	id int ,
+	name text not null,
+	age int not null,
+	address varchar(50),
+	salary real
+	
+);
+
+select * from company1
+--2
+insert into company1 values(01,NULL,NULL,'LA',250000)
+--3
+create table company3(
+	id int not null ,
+	name text,
+	age int unique,
+	address varchar(50),
+	salary real
+)
+--4
+insert into company3 values(02,'CAJE',25,'NY',50000)
+insert into company3 values(02,'CAJE',25,'NY',50000)
+
+--5
+create table company4(
+	id int primary key,
+	name text ,
+	age int ,
+	address varchar(50),
+	salary real
+) 
+--6
+insert into company4 values(03,'LOGAN',11,'CHICAGO',40000)
+insert into company4 values(03,'LOGAN',11,'CHICAGO',40000)
+--7
+create table employee(
+	id  int primary key,
+	name text,
+	age int ,
+	address varchar(50),
+	salary real
+	
+)
+create table department(
+	id int primary key,
+	name varchar(50) not null,
+	empid int references employee(id)
+)
+--8
+insert into employee values(1,'JAKE',11,'CHICAGO',40000)
+insert into employee values(2,'SENSEI',11,'US',40000)
+--9
+select * from employee
+insert into department values(07,'AJ STYLES',1)
+insert into department values(08,'JOHN',2)
+
+--10
+create table company5(
+	id int,
+	name text,
+	age int,
+	address varchar(50),
+	salary real check(salary>0)
+)
+insert into company5 values(09,'BAREN',24,'MADH',-1)
+
+

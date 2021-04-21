@@ -1,0 +1,103 @@
+Experiment 9
+
+Name: 
+Class: TE COMPUTERS
+Roll No: 
+Batch: 
+Task 1
+
+--1
+create or replace function f1() returns integer
+as $$
+<<bl>>
+declare
+	fact int: =1; n int: =4;
+begin
+	
+	while n>0
+	loop
+		fact=fact*n;
+		n=n-1;
+		
+	end loop;
+return fact;
+end;
+$$ language plpgsql
+drop function f1();
+select f1() AS "Factorial:";
+
+--2
+create table emp (
+id integer,
+name varchar (100),
+salary integer
+);
+insert into emp values(1,'Logan',1200000);
+insert into emp values(2,'Jake',450000);
+insert into emp values(3,'Tom',80500);
+
+--3
+
+create or replace function findAverage () returns decimal as 
+$avgSalary$
+declare
+	average decimal;
+begin
+   select avg(salary) into average from emp;
+   return average;
+end;
+$avgSalary$ language plpgsql;
+
+select findAverage();
+
+--4
+select * from emp
+
+CREATE TRIGGER beforeInsert BEFORE INSERT ON emp
+FOR EACH ROW EXECUTE PROCEDURE executeTrigger();
+
+CREATE OR REPLACE FUNCTION executeTrigger() RETURNS TRIGGER AS $empTable$
+   BEGIN
+      raise notice 'Not Allowed';
+      return new;
+   END;
+$empTable$ LANGUAGE plpgsql;
+
+insert into emp values(4,'Stark',4500); --NOTICE:  Not Allowed
+
+CREATE TRIGGER beforeUpdate BEFORE UPDATE ON emp
+FOR EACH ROW EXECUTE PROCEDURE executeTrigger();
+
+
+update emp set name ='Pew' where id=4; --NOTICE:  Not Allowed
+
+CREATE TRIGGER beforeDelete BEFORE DELETE ON emp
+FOR EACH ROW EXECUTE PROCEDURE executeTrigger();
+
+delete from emp where id=4; --NOTICE:  Not Allowed
+
+--5
+
+CREATE TRIGGER afterInsert AFTER INSERT ON emp
+FOR EACH ROW EXECUTE PROCEDURE executeTrigger();
+
+CREATE OR REPLACE FUNCTION executeTrigger() RETURNS TRIGGER AS $empTable$
+   BEGIN
+      INSERT INTO AUDIT (EMP_ID, ENTRY_DATE) VALUES (new.ID, current_timestamp);
+      return new;
+   END;
+$empTable$ LANGUAGE plpgsql;
+
+insert into emp values(5,'Malone',4500); 
+select * from audit;
+
+CREATE TRIGGER afterUpdate AFTER UPDATE ON emp
+FOR EACH ROW EXECUTE PROCEDURE executeTrigger();
+
+update emp set name ='Pew' where id=4;
+
+CREATE TRIGGER afterDelete AFTER DELETE ON emp
+FOR EACH ROW EXECUTE PROCEDURE executeTrigger();
+
+delete from emp where id=4; --NOTICE:  Not Allowed
+

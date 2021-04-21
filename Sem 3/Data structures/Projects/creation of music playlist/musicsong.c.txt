@@ -1,0 +1,640 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct music
+{
+    char name[10],artist[10];
+		int prio,d,m,y;
+		struct music *next;
+};
+struct music *START1,*START2;
+void addSongs()
+{   
+    struct music *newnode=(struct music*)malloc(sizeof(struct music));
+    printf("Enter Song name and artist\n");
+    scanf("%s%s",newnode->name,newnode->artist);
+    printf("\nEnter date,month and year of song\t");
+    scanf("%d,%d,%d",&newnode->d,&newnode->m,&newnode->y);
+    newnode->next=NULL;
+    newnode->prio=0;
+    if(START1==NULL)
+    {
+        START1=newnode;
+    }
+    else
+    {
+        struct music *ptr;
+        ptr=START1;
+        while(ptr->next!=NULL)
+        {
+            ptr=ptr->next;
+        }
+        ptr->next=newnode;
+    }
+}
+struct music *delete(struct music *p,char sname[10])
+{   
+    if(p==NULL)
+    {
+        printf("\nEmpty List");
+        return p;
+    }
+    if(strcmp(p->name,sname)==0)
+    {
+        struct music *temp;
+        temp=p;
+        if(p->next==NULL)
+        {
+            p==NULL;
+            free(temp);
+            printf("\nSong was found and deleted");
+            return NULL;
+        }
+        else
+        {
+            p=p->next;
+            free(temp);
+            printf("\nSong was found and deleted");
+            return p;
+        }
+    }
+    else
+    {
+        struct music *ptr;
+        ptr=p;
+        while(ptr->next!=NULL&&strcmp(ptr->next->name,sname)!=0)
+            ptr=ptr->next;
+        if(ptr->next==NULL)
+        {
+            printf("\nSong not found\n");
+            return p;
+        }
+        else
+        {
+            struct music *del;
+            del=ptr->next;
+            ptr->next=ptr->next->next;
+            free(del);
+            printf("\nSong was found and deleted");
+            return p;
+        }
+    }
+}
+void addPlay()
+{
+    if(START1==NULL)
+    {
+        printf("\nEmpty List");
+        return;
+    }
+    printf("\nThe List of songs are\n");
+    display(START1);
+    int flag=1;
+    char sname[10];
+    struct music *ptr1;
+    while(flag!=0)
+    {
+        printf("\nEnter the name of the song you want to add\n");
+        printf("Type EXIT to end\n");
+        scanf("%s",sname);
+        if(strcmp(sname,"EXIT")==0)
+        {
+            flag=0;
+            break;
+        }
+        else
+        {
+            ptr1=START1;
+            while(ptr1!=NULL&&strcmp(ptr1->name,sname)!=0)
+                ptr1=ptr1->next;
+            if(ptr1==NULL)
+            {
+                printf("\nSong not found in the Main List");
+                return;
+            }
+            else
+            {
+                struct music *newnode=(struct music*)malloc(sizeof(struct music));
+                strcpy(newnode->name,ptr1->name);
+                strcpy(newnode->artist,ptr1->artist);
+                newnode->d=ptr1->d;
+                newnode->m=ptr1->m;
+                newnode->y=ptr1->y;
+                newnode->next=NULL;
+                if(START2==NULL)
+                {
+                    START2=newnode;
+                }
+                else
+                {
+                    struct music *ptr2;
+                    ptr2=START2;
+                    while(ptr2->next!=NULL)
+                    {
+                        ptr2=ptr2->next;
+                    }
+                    ptr2->next=newnode;
+                }
+            }
+        }
+    }
+}
+void addPrio()
+{
+    if(START2==NULL)
+    {
+        printf("\nEmpty Playlist");
+        return;
+    }
+    else
+    {
+        struct music *ptr;
+        ptr=START2;
+        int prio;
+        while(ptr!=NULL)
+        {   
+            printf("\n%s\tAdd Priority: ",ptr->name);
+            scanf("%d",&prio);
+            ptr->prio=prio;
+            ptr=ptr->next;
+        }
+        return;
+    }
+}
+void sortPlay()
+{
+    struct music *ptr1,*ptr2;
+    struct music *temp=(struct music*)malloc(sizeof(struct music));
+	ptr1=START2;
+	while(ptr1->next!=NULL)
+	{
+		ptr2=ptr1->next;
+		while(ptr2!=NULL)
+		{
+			if(ptr1->prio>ptr2->prio)
+			{
+				temp->prio=ptr1->prio;
+			    strcpy(temp->name,ptr1->name);
+			    strcpy(temp->artist,ptr1->artist);
+			    temp->d=ptr1->d;
+			    temp->m=ptr1->m;
+			    temp->y=ptr1->y;
+			    ptr1->prio=ptr2->prio;
+			    strcpy(ptr1->name,ptr2->name);
+			    strcpy(ptr1->artist,ptr2->artist);
+			    ptr1->d=ptr2->d;
+			    ptr1->m=ptr2->m;
+			    ptr1->y=ptr2->y;
+			    ptr2->prio=temp->prio;
+			    strcpy(ptr2->name,temp->name);
+			    strcpy(ptr2->artist,temp->artist);
+			    ptr2->d=temp->d;
+			    ptr2->m=temp->m;
+			    ptr2->y=temp->y;
+			} 
+			ptr2=ptr2->next;
+		}
+		ptr1=ptr1->next;
+	}
+}
+void addInBtwn()
+{
+    if(START1==NULL)
+    {
+        printf("\nEmpty List");
+        return;
+    }
+    printf("\nThe List of songs are\n");
+    display(START1);
+    char sname[10];
+    struct music *ptr1=START1;
+    printf("\nEnter the name of the song you want to add\n");
+    scanf("%s",sname);
+    while(ptr1!=NULL&&strcmp(ptr1->name,sname)!=0)
+                ptr1=ptr1->next;
+            if(ptr1==NULL)
+            {
+                printf("\nSong not found in the Main List");
+                return;
+            }
+            else
+            {
+                struct music *newnode=(struct music*)malloc(sizeof(struct music));
+                strcpy(newnode->name,ptr1->name);
+                strcpy(newnode->artist,ptr1->artist);
+                newnode->d=ptr1->d;
+                newnode->m=ptr1->m;
+                newnode->y=ptr1->y;
+                newnode->next=NULL;
+                printf("Enter priority: ");
+                scanf("%d",&newnode->prio);
+                if(START2==NULL)
+                {
+                    START2=newnode;
+                    return;
+                }
+                else
+                {
+                   if(START2->prio>newnode->prio)
+		            {
+			            newnode->next=START2;
+                        START2=newnode;
+                        return;
+                    }
+		            else
+		            {     
+                        struct music *ptr;
+                        ptr=START2;
+                        while(ptr->next!=NULL&&ptr->next->prio<=newnode->prio)
+			            {
+ 				            ptr=ptr->next;
+			            }
+                        newnode->next=ptr->next;
+			            ptr->next=newnode;	
+			            
+		            }
+                }   
+                
+            }
+}
+void samePrio()
+{
+    if(START2==NULL||START2->next==NULL)
+        return;
+    else
+    {
+        struct music *ptr,*preptr;
+        ptr=START2;
+        while(ptr->next!=NULL)
+        {
+            preptr=ptr;
+            ptr=ptr->next;
+            if(ptr->prio==preptr->prio)
+            {
+                while(ptr!=NULL)
+                {
+                    ptr->prio++;
+                    ptr=ptr->next;
+                }
+                return;
+            }
+        }
+    }
+}
+void createPlaywArt()
+{
+    START2=NULL;
+    if(START1==NULL)
+    {
+        printf("\nEmpty List");
+        return;
+    }
+    printf("\nThe List of songs are\n");
+    display(START1);
+    char sartist[10];
+    struct music *ptr;
+    printf("\nEnter the name of the Artist\t");
+    scanf("%s",sartist);
+    ptr=START1;
+    while(ptr!=NULL)
+    {
+        if(strcmp(ptr->artist,sartist)==0)
+        {
+                struct music *newnode=(struct music*)malloc(sizeof(struct music));
+                strcpy(newnode->name,ptr->name);
+                strcpy(newnode->artist,ptr->artist);
+                newnode->d=ptr->d;
+                newnode->m=ptr->m;
+                newnode->y=ptr->y;
+                newnode->next=NULL;
+                if(START2==NULL)
+                {
+                    START2=newnode;
+                }
+                else
+                {
+                    struct music *ptr2;
+                    ptr2=START2;
+                    while(ptr2->next!=NULL)
+                    {
+                        ptr2=ptr2->next;
+                    }
+                    ptr2->next=newnode;
+                }
+        }
+        ptr=ptr->next;
+    }
+    if(START2==NULL)
+        printf("\nNo such song with the mentioned artist was found");
+    else
+        printf("\nPlaylist was successfully created");
+}
+void display(struct music *p)
+{
+    if(p==NULL)
+    {
+        printf("Empty List");
+        return;
+    }
+    else
+    {   
+        printf("\nPriority\tName\tArtist\tD-M-Y\n");
+        while(p!=NULL)
+        {
+            if(p->prio==0)
+                printf("-\t\t");
+            else
+                printf("%d\t\t",p->prio);
+            printf("%s\t%s",p->name,p->artist);
+            printf("\t%d-%d-%d\n",p->d,p->m,p->y);
+            p=p->next;
+        }
+    }
+}
+void main()
+{
+    char sname[10];
+    int option;
+    do
+	{
+		printf("\nWELCOME TO MUSICA\n");
+		printf("1.Add Song to Main List\n2.Delete from Main List\n3.Display Main List\n4.Add Songs to Playlist\n5.Display Playlist\n6.Delete songs from Playlist\n7.Add Priority to Playlist\n8.Add a song in between Playlist\n9.Create Playlist with Specific Artist\n10.Exit\n");
+		printf("Enter the option of your choice\n");
+		scanf("%d",&option);
+		switch(option)
+		{
+			case 1: addSongs();
+					break;
+			case 2: printf("\nEnter name of the song you want to delete\t");
+                    scanf("%s",sname);
+                    START1=delete(START1,sname);
+                    START2=delete(START2,sname);
+			        break;
+			case 3: display(START1);
+			        break;
+			case 4: addPlay();
+			        break; 
+			case 5: display(START2);
+			        break;
+			case 6: printf("\nEnter name of the song you want to delete\t");
+                    scanf("%s",sname);
+			        START2=delete(START2,sname);
+			        break;
+			case 7: addPrio();
+			        sortPlay();
+			        printf("\nPLAYLIST\n");
+			        display(START2);
+			        break;
+			case 8: addInBtwn();
+			        samePrio();
+			        break;
+			case 9: createPlaywArt();
+			        break;
+			case 10: exit(0);
+					 break;
+			default : printf("\nINVALID OPTION\n");
+		}
+	
+	}
+	while(1);
+}
+/*
+WELCOME TO MUSICA
+1.Add Song to Main List
+2.Delete from Main List
+3.Display Main List
+4.Add Songs to Playlist
+5.Display Playlist
+6.Delete songs from Playlist
+7.Add Priority to Playlist
+8.Add a song in between Playlist
+9.Create Playlist with Specific Artist
+10.Exit
+Enter the option of your choice
+1
+Enter Song name and artist
+Rose
+Ron
+
+Enter date,month and year of song	3,4,2005
+
+Enter the option of your choice
+1
+Enter Song name and artist
+Baarish
+MRafi
+
+Enter date,month and year of song	2,7,2008
+
+Enter the option of your choice
+1
+Enter Song name and artist
+Jog
+Duck
+
+Enter date,month and year of song	1,12,2009
+
+Enter the option of your choice
+1
+Enter Song name and artist
+Troll
+Tension
+
+Enter date,month and year of song	2,7,2013
+
+Enter the option of your choice
+1
+Enter Song name and artist
+Diwali
+MRafi
+
+Enter date,month and year of song	3,5,2005
+
+Enter the option of your choice
+1
+Enter Song name and artist
+Don
+MRafi
+
+Enter date,month and year of song	3,6,1999
+
+Enter the option of your choice
+1
+Enter Song name and artist
+Rage
+Race
+
+Enter date,month and year of song	1,11,2004
+
+Enter the option of your choice
+1
+Enter Song name and artist
+Teab
+MRafi
+
+Enter date,month and year of song	23,4,1998
+
+Enter the option of your choice
+1
+Enter Song name and artist
+Crae
+Shin
+
+Enter date,month and year of song	2,5,1996
+
+Enter the option of your choice
+1
+Enter Song name and artist
+Coffee
+Sugar
+
+Enter date,month and year of song	5,6,2017
+
+Enter the option of your choice
+3
+
+Priority	Name		Artist	D-M-Y
+-		Rose		Ron		3-4-2005
+-		Baarish	MRafi		2-7-2008
+-		Jog		Duck		1-12-2009
+-		Troll		Tension	2-7-2013
+-		Diwali	MRafi		3-5-2005
+-		Don		MRafi		3-6-1999
+-		Rage		Race		1-11-2004
+-		Teab		MRafi		23-4-1998
+-		Crae		Shin		2-5-1996
+-		Coffee	Sugar		5-6-2017
+
+Enter the option of your choice
+2
+
+Enter name of the song you want to delete	Crae
+
+Song was found and deleted
+Empty List
+
+Enter the option of your choice
+4
+
+The List of songs are
+
+Priority	Name		Artist	D-M-Y
+-		Rose		Ron		3-4-2005
+-		Baarish	MRafi		2-7-2008
+-		Jog		Duck		1-12-2009
+-		Troll		Tension	2-7-2013
+-		Diwali	MRafi		3-5-2005
+-		Don		MRafi		3-6-1999
+-		Rage		Race		1-11-2004
+-		Teab		MRafi		23-4-1998
+-		Coffee	Sugar		5-6-2017
+
+Enter the name of the song you want to add
+Type EXIT to end
+Rose
+
+Enter the name of the song you want to add
+Type EXIT to end
+Troll
+
+Enter the name of the song you want to add
+Type EXIT to end
+Coffee
+
+Enter the name of the song you want to add
+Type EXIT to end
+EXIT
+
+Enter the option of your choice
+5
+
+Priority	Name		Artist	D-M-Y
+-		Rose		Ron		3-4-2005
+-		Troll		Tension	2-7-2013
+-		Coffee	Sugar		5-6-2017
+
+Enter the option of your choice
+6
+
+Enter name of the song you want to delete	Troll
+
+Song was found and deleted
+WELCOME TO MUSICA
+
+Enter the option of your choice
+7
+
+Rose	Add Priority: 2
+
+Coffee	Add Priority: 1
+
+PLAYLIST
+
+Priority	Name	Artist	D-M-Y
+1		Coffee		Sugar	5-6-2017
+2		Rose	Ron		3-4-2005
+
+
+Enter the option of your choice
+8
+
+The List of songs are
+
+Priority	Name		Artist	D-M-Y
+-		Rose		Ron		3-4-2005
+-		Baarish	MRafi		2-7-2008
+-		Jog		Duck		1-12-2009
+-		Troll		Tension	2-7-2013
+-		Diwali	MRafi		3-5-2005
+-		Don		MRafi		3-6-1999
+-		Rage		Race		1-11-2004
+-		Teab		MRafi		23-4-1998
+-		Coffee	Sugar		5-6-2017
+
+Enter the name of the song you want to add
+Jog
+Enter priority: 1
+
+
+Enter the option of your choice
+5
+
+Priority	Name		Artist	D-M-Y
+1		Coffee	Sugar		5-6-2017
+2		Jog		Duck		1-12-2009
+3		Rose		Ron		3-4-2005
+
+
+Enter the option of your choice
+9
+
+The List of songs are
+
+Priority	Name		Artist	D-M-Y
+-		Rose		Ron		3-4-2005
+-		Baarish	MRafi		2-7-2008
+-		Jog		Duck		1-12-2009
+-		Troll		Tension	2-7-2013
+-		Diwali	MRafi		3-5-2005
+-		Don		MRafi		3-6-1999
+-		Rage		Race		1-11-2004
+-		Teab		MRafi		23-4-1998
+-		Coffee	Sugar		5-6-2017
+
+Enter the name of the Artist	MRafi
+
+Playlist was successfully created
+WELCOME TO MUSICA
+Enter the option of your choice
+5
+
+Priority	Name		Artist	D-M-Y
+-		Baarish	MRafi		2-7-2008
+-		Diwali	MRafi		3-5-2005
+-		Don		MRafi		3-6-1999
+-		Teab		MRafi		23-4-1998
+
+Enter the option of your choice
+10
+*/
+

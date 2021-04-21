@@ -1,0 +1,68 @@
+EXPT 6
+
+Task 1
+--1
+create table sales_order_details (
+	order_no varchar (6) primary key,
+	product_no varchar (6),
+	qty_ordered numeric (8),
+	qty_disp numeric (8),
+	product_rate numeric (10,2),
+	order_date date not null
+)
+drop table sales_order_details
+create table customer (
+	cid integer primary key,
+	cname varchar (25),
+	address varchar (25),
+	pno numeric (10)
+)
+drop table customer
+create table cust_order (
+	cid int references customer(cid),
+	order_no varchar (6) references sales_order_details(order_no)
+)
+drop table cust_order
+--2
+insert into sales_order_details values ('123','321',5,3,50000,'2018-01-12')
+insert into sales_order_details values ('456','654',4,2,40000,'2018-03-15')
+insert into sales_order_details values ('789','987',3,1,55000,'2018-04-13')
+insert into sales_order_details values ('012','210',6,3,75000,'2018-02-14')
+insert into sales_order_details values ('345','543',7,5,45000,'2018-01-28')
+
+insert into customer values(1,'Abc','Cba','1234567890')
+insert into customer values(2,'Def','Fed','1234554321')
+insert into customer values(3,'Ghi','Ihg','5432112345')
+insert into customer values(4,'Jkl','Lkj','9876543210')
+
+insert into cust_order values (1,'123')
+insert into cust_order values (2,'456')
+insert into cust_order values (3,'789')
+insert into cust_order values (4,'012')
+
+--3
+select product_no, qty_ordered from customer c cross join cust_order co cross join sales_order_details sod
+where c.cid=co.cid
+and co.order_no=sod.order_no
+--4
+select product_rate from customer c,cust_orderco,sales_order_details sod
+where c.cid=co.cid
+and co.order_no=sod.order_no
+--5
+select avg(qty_ordered) from customer c,cust_order co,sales_order_details sod
+where c.cid=co.cid and co.order_no=sod.order_no and sod.product_rate<=15000
+--6
+select sum(product_rate) from customer c,cust_order co,sales_order_details sod
+where c.cid=co.cid
+and co.order_no=sod.order_no and extract('month' from order_date)=01
+--7
+select qty_ordered from customer c,cust_order co,sales_order_details sod
+where c.cid=co.cid and co.order_no=sod.order_no and sod.qty_ordered>10
+--8
+select cname , product_no 
+from customer c,cust_order co ,sales_order_details sod 
+where c.cid = co.cid
+and co.order_no = sod.order_no
+and qty_ordered = (Select max(qty_ordered) from customer c,cust_order co ,sales_order_details sod 
+where c.cid = co.cid
+and co.order_no = sod.order_no)

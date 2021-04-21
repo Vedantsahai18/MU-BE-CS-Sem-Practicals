@@ -1,0 +1,23 @@
+.8086
+.model small
+.data
+arr db 01h, 02h, 03h, 04h, 05h
+res db ?
+.code
+start:
+    mov ax, @data
+    mov ds, ax
+    lea si, arr
+    mov cl, 05h
+    mov bl, 00h
+bck:mov al, [si]
+    ror al, 01h
+    jnc nxt
+    add bl, [si]
+nxt:inc si
+    dec cl
+    jnz bck
+    mov res, bl
+    mov ah, 4ch 
+    int 21h
+end start

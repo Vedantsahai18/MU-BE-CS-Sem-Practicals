@@ -1,0 +1,159 @@
+{\rtf1\ansi\ansicpg1252\deff0\uc1
+{\fonttbl
+{\f0\fnil\fcharset0\fprq0\fttruetype Courier New;}
+{\f1\fnil\fcharset0\fprq0\fttruetype Calibri;}
+{\f2\fnil\fcharset0\fprq0\fttruetype Liberation Sans;}}
+{\colortbl
+\red0\green0\blue0;
+\red255\green255\blue255;
+\red255\green255\blue255;}
+{\stylesheet
+{\s6\fi-431\li720\sbasedon28\snext28 Contents 1;}
+{\s7\fi-431\li1440\sbasedon28\snext28 Contents 2;}
+{\s1\fi-431\li720 Arrowhead List;}
+{\s27\fi-431\li720\sbasedon28 Lower Roman List;}
+{\s29\tx431\sbasedon20\snext28 Numbered Heading 1;}
+{\s30\tx431\sbasedon21\snext28 Numbered Heading 2;}
+{\s12\fi-431\li720 Diamond List;}
+{\s9\fi-431\li2880\sbasedon28\snext28 Contents 4;}
+{\s8\fi-431\li2160\sbasedon28\snext28 Contents 3;}
+{\s31\tx431\sbasedon22\snext28 Numbered Heading 3;}
+{\s32\fi-431\li720 Numbered List;}
+{\s15\sbasedon28 Endnote Text;}
+{\*\cs14\fs20\super Endnote Reference;}
+{\s4\fi-431\li720 Bullet List;}
+{\s5\tx1584\sbasedon29\snext28 Chapter Heading;}
+{\s35\fi-431\li720 Square List;}
+{\s11\fi-431\li720 Dashed List;}
+{\s22\sb440\sa60\f2\fs24\b\sbasedon28\snext28 Heading 3;}
+{\s37\f1\fs22\lang1033\snext37 Table Normal;}
+{\s24\fi-431\li720 Heart List;}
+{\s38\fi-431\li720 Tick List;}
+{\s41\fi-431\li720\sbasedon32 Upper Roman List;}
+{\s40\fi-431\li720\sbasedon32 Upper Case List;}
+{\s16\fi-288\li288\fs20\sbasedon28 Footnote;}
+{\s19\fi-431\li720 Hand List;}
+{\s18\fs20\sbasedon28 Footnote Text;}
+{\s20\sb440\sa60\f2\fs34\b\sbasedon28\snext28 Heading 1;}
+{\s21\sb440\sa60\f2\fs28\b\sbasedon28\snext28 Heading 2;}
+{\s10\qc\sb240\sa120\f2\fs32\b\sbasedon28\snext28 Contents Header;}
+{\s23\sb440\sa60\f2\fs24\b\sbasedon28\snext28 Heading 4;}
+{\s28\f1\fs22\lang1033\snext28 Normal;}
+{\s26\fi-431\li720\sbasedon32 Lower Case List;}
+{\s2\li1440\ri1440\sa120\sbasedon28 Block Text;}
+{\s33\f0\sbasedon28 Plain Text;}
+{\s34\tx1584\sbasedon29\snext28 Section Heading;}
+{\s25\fi-431\li720 Implies List;}
+{\s3\fi-431\li720 Box List;}
+{\s36\fi-431\li720 Star List;}
+{\*\cs17\fs20\super Footnote Reference;}
+{\s39\fi-431\li720 Triangle List;}
+{\s13\fi-288\li288\sbasedon28 Endnote;}}
+\kerning0\cf0\ftnbj\fet2\ftnstart1\ftnnar\aftnnar\ftnstart1\aftnstart1\aenddoc\revprop3{\*\rdf}{\info\uc1{\author Supriya}}\deftab720\viewkind1\paperw12240\paperh15840\margl1440\margr1440\widowctrl
+\sectd\sbknone\colsx360\pgncont\ltrsect
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch Pass 1}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch #include <stdio.h>}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch #include <string.h>}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch void main()}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch \{}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch char opcode[10],mnemonic[10],operand[10],label[10],code[10];}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch int locctr,start,length,flag=0;}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch FILE *fp1,*fp2,*fp3,*fp4;}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch fp1=fopen("INPUT1.txt","r");}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch fp2=fopen("st.txt","w");}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch fp3=fopen("out.txt","w");}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch \tab fp4=fopen("MOT.txt","r");}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch fscanf(fp1,"%s%s%s",label,opcode,operand);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch printf("%s%s%s",label,opcode,operand);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch if(strcmp(opcode,"START")==0)}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch \{}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch locctr=0;}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch fprintf(fp3,"%s\\t%s\\t%s\\n",label,opcode,operand);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch fscanf(fp1,"%s%s%s",label,opcode,operand);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\abinodiroverride\ltrch \}}{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch while(strcmp(opcode,"END")!=0)}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch \{}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch     fprintf(fp3,"%d\\t",locctr);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch    if(strcmp(label,"**")!=0)}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch     fprintf(fp2,"%s\\t%d\\n",label,locctr);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch     }{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch      fscanf(fp4,"%s",mnemonic);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch if(strcmp(opcode,"DC")==0)}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch locctr+=4;}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch else if(strcmp(opcode,"DS")==0)}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch locctr+=4;}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch    else if(strcmp(opcode,"USING")==0)}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch    \{}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch    locctr+=0;}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch       \}}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch while(strcmp(mnemonic,"END")!=0)}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch     \{}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch     if(strcmp(opcode,mnemonic)==0)}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch     \{}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch       }{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch            locctr+=4;}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch flag=1;}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch            break;}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch      \}}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch     fscanf(fp4,"%s",mnemonic);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch     \}}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch flag=0;}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch fprintf(fp3,"%s\\t%s\\t%s\\n",label,opcode,operand);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch fscanf(fp1,"%s%s%s",label,opcode,operand);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch rewind(fp4);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch \}}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch fprintf(fp3,"%d\\t%s\\t%s\\t%s\\n",locctr,label,opcode,operand);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch length=locctr-start;}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch printf("\\n The length of the program is %d",length);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch fclose(fp1);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch fclose(fp2);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch fclose(fp3);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch fclose(fp4);}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch \}}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs26\b\lang0{\*\listtag0}\abinodiroverride\ltrch Input}{\s28\f1\fs26\b\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch PG1 START  0}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch **  USING  *,15}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch **   L   1,FIVE}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch **   A   1,FOUR}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch **   ST  1,TEMP}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch FIVE  DC  F'5'}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch FOUR  DC  F'4'}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch TEMP  DS  1F}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch **    END PG1}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\b\lang0{\*\listtag0}\abinodiroverride\ltrch MOT}{\s28\f1\fs22\b\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch A 5A}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch L  6A}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch ST 7A}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch END }{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs26\b\lang0{\*\listtag0}\abinodiroverride\ltrch OUTPUT}{\s28\f0\fs26\b\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch PG1\tab START\tab 0}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch 0\tab **\tab USING\tab *,15}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch 0\tab **\tab L\tab 1,FIVE}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch 4\tab **\tab A\tab 1,FOUR}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch 8\tab **\tab ST\tab 1,TEMP}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch 12\tab FIVE\tab DC\tab F'5'}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch 16\tab FOUR\tab DC\tab F'4'}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch 20\tab TEMP\tab DS\tab 1F}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch 24\tab **\tab END\tab PG1}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\b\lang0{\*\listtag0}\abinodiroverride\ltrch ST}{\s28\f1\fs22\b\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch FIVE\tab 12}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch FOUR\tab 16}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f0\fs22\lang0{\*\listtag0}\abinodiroverride\ltrch TEMP\tab 20}{\s28\f0\fs22\lang0{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s28\itap0{\s28\f1\fs22\lang1033{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\itap0{\f1\fs22\lang1024{\*\listtag0}\par}}

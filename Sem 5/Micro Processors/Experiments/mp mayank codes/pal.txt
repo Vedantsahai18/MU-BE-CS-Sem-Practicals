@@ -1,0 +1,51 @@
+.8086
+.model small
+.data
+w db "nitin$"
+s db "The string is pallindrome$"
+e db "The string is not pallindrome$"
+res db 00h
+count db 00h
+.code
+start:
+    mov ax, @data
+    mov ds, ax
+    lea si, w
+    lea di, w
+    mov bl, "$"
+    mov cl, count
+
+cnt:inc di
+    inc cl
+    cmp [di], bl
+    jne cnt
+    dec di
+
+con:mov al, [si]    
+    mov ah, [di]
+    cmp al, ah
+    jne np
+    inc si
+    dec di
+    cmp si, di
+    jl con
+
+    lea dx, s
+    mov ah, 09h
+    int 21h
+    mov ah, 08h
+    int 21h
+    mov al, 01h
+    mov res, al
+    jmp last
+
+np: lea dx, e
+    mov ah, 09h
+    int 21h
+    mov ah, 08h
+    int 21h
+    mov al, 00h
+    mov res, al
+last:mov ah, 4ch
+    int 21h
+end start

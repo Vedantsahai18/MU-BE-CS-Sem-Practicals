@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/TECOMP.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE root SYSTEM "TECOMP.dtd">
+
+    <root>
+    ...
+    </root>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT root (college)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT college (class)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT class (name|department|rollno)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT name (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT department (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT rollno (#PCDATA)>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Resume Vedant Sahai</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="style.css"/>
+<title>Vedant Sahai</title>
+<link
+
+href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Abel|Bungee+Hairline|Sa
+cramento|Raleway|Slabo+27px" rel="stylesheet">
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th {
+  text-align: centre;
+}
+</style>
+</head>
+<body>
+<div id="header"></div>
+<div class="left"></div>
+<div class="stuff">
+<br>
+<p class="head1">Resume</p>
+<p class="head1">Vedant Sahai</p>
+<div class=" striped"></div>
+</br>
+<p class="head">Interests</p>
+<ul class='head2'>
+<li>Photography</li>
+<li>Design</li>
+<li>Programming</li>
+<li>Computer Science</li>
+</ul>
+<p class="head">Skills</p>
+<ul class='head2'>
+<li>Web Design with HTML & CSS</li>
+<li>Machine Learning and Artifical Intelligence</li>
+<li>Linux Shell Scripting</li>
+</ul>
+<p class="head">Education</p>
+<ol class='head2'>
+<a href="http://www.frcrce.ac.in/">
+<li>Fr. Conceicao Rodrigues College of Engineering </li>
+</a>
+<a href="http://www.nirmala.edu.in/">
+<li>Nirmala Memorial Foundation College of Commerce and Science</li>
+</a>
+<!--Link-->
+
+<a href="https://tismumbai.in/">
+<li>Thakur International School</li>
+</a>
+</ol>
+<p class="head"> Programming Languages </p>
+<br></br>
+<table style="width:100%">
+  <tr>
+	<th align="centre">Web Technology</th>
+	<th>Backend</th>
+	<th>Artificial Intelligence</th>
+  </tr>
+  <tr>
+	<td>HTML</td>
+	<td>Flask</td>
+	<td>Keras</td>
+  </tr>
+  <tr>
+	<td>CSS</td>
+	<td>.NET</td>
+	<td>Tensorflow</td>
+  </tr>
+  <tr>
+	<td>Javascript</td>
+	<td>Angular</td>
+	<td>Theanos</td>
+  </tr>
+</table>
+<br></br>
+<p class="head">Experience</p>
+<ul class='head2'>
+<li>Two months Technical Internship at Mumbai International Airport Limited (GVK)</li>
+<li>Member of Team Mavericks for a Year </li>
+</ul>
+</div>
+<div class="right"></div>
+<div id="footer">
+<h2 id="name">Vedant Sahai</h2></div>
+</body>
+</html>

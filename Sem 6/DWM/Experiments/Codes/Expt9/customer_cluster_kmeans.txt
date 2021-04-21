@@ -1,0 +1,66 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     customers
+Instances:    9
+Attributes:   5
+              income
+              age
+              children
+              education
+Ignored:
+              marital_status
+Test mode:    Classes to clusters evaluation on training data
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 3
+Within cluster sum of squared errors: 3.969401387874361
+
+Initial starting points (random):
+
+Cluster 0: 25000,35,3,high_school
+Cluster 1: 30000,20,0,high_school
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                  Cluster#
+Attribute            Full Data           0           1
+                         (9.0)       (4.0)       (5.0)
+======================================================
+income              63333.3333       97500       36000
+age                    36.6667          45          30
+children                1.5556         2.5         0.8
+education          high_school     college high_school
+
+
+
+
+Time taken to build model (full training data) : 0 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      4 ( 44%)
+1      5 ( 56%)
+
+
+Class attribute: marital_status
+Classes to Clusters:
+
+ 0 1  <-- assigned to cluster
+ 0 2 | single
+ 2 2 | married
+ 2 1 | divorced
+
+Cluster 0 <-- married
+Cluster 1 <-- single
+
+Incorrectly clustered instances :	5.0	 55.5556 %
+

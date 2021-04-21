@@ -1,0 +1,250 @@
+***Welcome to admission portal of 'The Crazy Genius School'*** 
+Here are your choices: 
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Ram
+13
+1
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Pranay
+89
+0
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Rameshwar
+78
+1
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Jason
+100
+0
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Shubham
+87
+0
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Suparna
+43
+1
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1    
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Kudos
+67
+1
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1      
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Bagush
+88
+1
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Chintan
+56
+0
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1   
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Hari
+23
+1
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Aakash
+56
+0
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Baruda
+90
+1
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Desai
+45
+1
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Eli
+99
+0
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Fascel
+77
+1
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Gayatri
+55
+1
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Hemant
+89
+0
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Ishanti
+60
+1
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+1
+Enter first name and marks for student. Enter 0 if general, 1 if reserved after 
+Krishna
+82
+1
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+2
+1 	 Baruda 	 90
+1 	 Bagush 	 88
+1 	 Krishna 	 82
+1 	 Rameshwar 	 78
+1 	 Fascel 	 77
+1 	 Kudos 	 	 67
+1 	 Ishanti 	 60
+1 	 Gayatri 	 55
+1 	 Desai 	 	 45
+1 	 Suparna 	 43
+1 	 Hari 	 	 23
+0 	 Jason 	 	 100
+0 	 Eli 	 	 99
+0 	 Pranay 	 89
+0 	 Hemant 	 89
+0 	 Shubham 	 87
+0 	 Chintan 	 56
+0 	 Aakash 	 56
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+3
+Enter name to be searched in final list
+Ram
+Sorry! Admission not secured. 
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+3
+Enter name to be searched in final list
+Desai
+Record found
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+3
+Enter name to be searched in final list
+Jason
+Record found
+1.Enter student data for admission process 
+2.Display final admission list 
+3.Search if your sweet kid has secured admission? 
+4.Make a file of students securing admission 
+5.Exit 
+4
+5

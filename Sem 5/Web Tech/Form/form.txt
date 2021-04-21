@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link type="text/css" rel="stylesheet" href="style.css"/>
+        <title> Vedant Sahai</title>
+    </head>
+    <body>
+       <div class="container">
+        <center> <h1 > Form Example </h1> </center>
+            <form >
+              <label class ="head" for="fname">First Name : </label>
+			   <br></br>
+              <input class ="head2" type="text" id="fname" name="firstname" placeholder="Your name..">
+              <br></br>
+              <label class ="head" for="lname">Last Name : </label>
+			   <br></br>
+              <input class ="head2 "type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <br></br>
+              <label class ="head" for="lname">Mobile Number : </label>
+			   <br></br>
+              <input class ="head2 " type="text" id="pname" name="mobilenumber" placeholder="Your phone number..">
+              <br></br>
+              <label class ="head" for="gname"> Gender : 
+                 <br></br>
+                 <label>
+                    <input class ="width " name="group1s" type="radio" checked />
+                    <span>Male</span>
+                  </label>
+                  <label>
+                    <input class ="width" name="group1s" type="radio" checked />
+                    <span>Female</span>
+                  </label>
+                  <label>
+                    <input class ="width" name="group1s" type="radio" checked />
+                    <span>Other</span>
+                  </label>
+              </label>
+              <br></br>    
+              </p>
+              <label class ="head" for="country">Country : </label>
+              <select id="country" name="country" >
+                <option value="india">India</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+              <br></br>
+              <label class ="head" for="subject">Subject : </label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              <br></br>
+              <button id="myBtn" class ="head1" type="submit"  onclick="myFunction()"> Submit </button>
+
+            </form>
+          </div>
+          
+          <script>
+         function myFunction() 
+         {
+          var txt;
+            if (confirm("Are you sure you want to submit the form ?"))
+              {
+                  var person = prompt("Please enter your password")
+                  if ( person == 'Universe')
+                  {
+                     alert("Form successfully submitted")
+                  }
+              } 
+            else 
+              {
+                alert("Form not submitted");
+              }
+        }   
+        </script>
+    </body>
+</html>
+

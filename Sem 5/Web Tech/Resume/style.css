@@ -1,0 +1,116 @@
+* {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  
+  /*body {
+      min-width: 500px;
+  }*/
+  
+  div {
+    border-radius: 5px;
+  }
+  
+  #header {
+    height: 40px;
+    width: 100%;
+    background-color: #08ee00;
+    position: fixed;
+    z-index: 1;
+  }
+  
+  #title {
+    margin-left: '\f037';
+  }
+  
+  #footer {
+    height: 40px;
+    width: 100%;
+    background-color: #08ee00;
+    clear: both;
+    position: relative;
+  }
+  
+  .left {
+    height: 1100px;
+    width: 45px;
+    background-color: #d9ff00;
+    float: left;
+    position: fixed;
+  }
+  
+  .right {
+    height: 1100px;
+    width: 45px;
+    background-color: #d9ff00;
+    float: right;
+    position: inherit;
+  }
+  
+  .stuff {
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 55px;
+    width: '\f1b9';
+    height: 1000px;
+    position: '\f037';
+  }
+  .striped {
+    border: 3px dashed rgb(255, 0, 191);
+    width: 700px;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+  
+}
+  p,
+  li {
+    font-family: 'Times New Roman';
+   
+  }
+  .head2 {
+    font-size: 20px;
+    color: black;
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+  .head1 {
+    font-size: 40px;
+    color:red;
+    text-align: center;
+    text-decoration-color: rgb(0, 246, 164);
+    margin-top: 3%;
+    margin-bottom: 3%;
+    
+  }
+  .head {
+    font-size: 30px;
+    color:green;
+   
+  }
+  
+  #name {
+    font-family: Sacramento;
+    float: right;
+    margin-right: 4%;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+
+  }
+  
+  @media only screen and (max-width: 430px) {
+    .left,
+    .right {
+      display: none;
+      
+    }
+    .stuff {
+      width: 100%;
+     
+    }
+  }

@@ -1,0 +1,25 @@
+.8086
+.model small
+.data
+num1 dw 0ffffh
+num2 dw 0ffffh
+sum dw 0000h
+car db 00h
+.code
+start:
+mov ax , @data;
+mov ds , ax;
+mov ax , num1;
+add ax , num2;
+jnc next
+mov sum, ax;
+mov ah, 01h; 
+mov car, ah;
+jmp no
+next:
+mov car, 00h;
+mov sum, ax;
+no:
+mov ah , 4ch;
+int 21h;
+end start

@@ -1,0 +1,17 @@
+.8086
+.model small
+.data
+num1 dw 2222h
+num2 dw 1111h
+result dw ?
+.code
+start:
+    mov ax, @data
+    mov ds, ax
+    mov ax, num1
+    mov bx, num2
+    sub ax, bx
+    mov result, ax
+    mov ah, 4ch
+    int 21h
+end start

@@ -1,0 +1,50 @@
+EXPT -7
+
+--1
+SELECT product_no , qty_desc
+FROM sales_order_details
+WHERE NOT EXISTS 
+(SELECT * 
+ FROM cust_order
+WHERE sales_order_details.order_no = cust_order.order_no);
+--2
+SELECT cname, address 
+FROM customer cross join cust_order cross join sales_order_details
+WHERE customer.cid = cust_order.cid AND cust_order.order_no = sales_order_details.order_no AND cust_order.order_no = '101' ;
+--3
+SELECT distinct cname
+FROM customer cross join cust_order cross join sales_order_details
+WHERE customer.cid = cust_order.cid AND cust_order.order_no = sales_order_details.order_no
+And extract(month from sales_order_details.order_date) <= 5;
+--4 
+SELECT customer.cid, cname
+FROM customer cross join cust_order cross join sales_order_details
+WHERE customer.cid = cust_order.cid AND cust_order.order_no = sales_order_details.order_no
+AND cust_order.order_no = '103'
+--5
+SELECT cname
+FROM customer cross join cust_order cross join sales_order_details
+WHERE customer.cid = cust_order.cid AND cust_order.order_no = sales_order_details.order_no
+AND sales_order_details.product_rate> 50000
+--6
+SELECT cname , sales_order_details.qty_desc , product_rate
+FROM customer cross join cust_order cross join sales_order_details
+WHERE customer.cid = cust_order.cid AND cust_order.order_no = sales_order_details.order_no
+AND customer.cname = 'Logan'
+
+--7
+SELECT product_no
+FROM sales_order_details
+WHERE NOT EXISTS 
+(SELECT * 
+ FROM cust_order
+WHERE sales_order_details.order_no = cust_order.order_no);
+
+--8
+SELECT X.product_no , X.count , qty_desc FROM sales_order_details ,(
+SELECT sales_order_details.product_no as "product_no", sum(qty_ordered) AS "count"
+FROM customer cross join cust_order cross join sales_order_details
+WHERE customer.cid = cust_order.cid AND cust_order.order_no = sales_order_details.order_no
+GROUP BY sales_order_details.product_no
+) AS X
+WHERE X.product_no = sales_order_details.product_no

@@ -1,0 +1,32 @@
+.8086
+.model small
+.data
+l db 05h
+b db 02h
+r db 0Ah
+pi db 03h
+ar db 00h
+ac db 00h
+.code
+areasq macro
+    mov ah, 00h
+    mov al, l
+    mov bl, b
+    mul bl
+endm
+areac macro
+    mov ah, 00h
+    mov al, r
+    mul al
+    mul pi
+endm
+start:
+mov ax, @data
+mov ds, ax
+areasq
+mov ar, al
+areac
+mov ac, al
+mov ah, 4ch
+int 21h
+end start

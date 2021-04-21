@@ -1,0 +1,66 @@
+Experiment 4
+
+Task 1
+
+create table sales_order(
+name varchar(20),
+order_no varchar(6),
+order_date date,
+client_no varchar(6),
+delv_addr varchar(25),
+salesman_no varchar(6),
+delv_type varchar(20),
+billed_yn varchar(20),
+delv_date date,
+order_status varchar(20),
+daysreqdfordelivery int,
+city varchar(20),
+bal_due int,
+sellingprice int
+)
+insert into sales_order values('Ram','123', '2018-01-12','C001','abc','20','Prepaid','Invoice Given','2018-01-17','delivered',5,'Mumbai',12000,15000)
+insert into sales_order values('Raj','456', '2018-02-18','C002','def','21','COD','Invoice Not Given','2018-02-20','delivered',2,'Pune',8000,9500)
+insert into sales_order values('Rohit','789', '2018-05-22','C003','ghi','22','Prepaid','Invoice Given','2018-05-24','out for delivery',2,'Bengaluru',14000,16000)
+insert into sales_order values('Vedant','012', '2018-07-24','C004','jkl','23','Prepaid','Invoice Not Given','2018-07-27','shipping',3,'Delhi',3000,3500)
+insert into sales_order values('Caje','345', '2018-09-26','C005','mno','24','COD','Invoice Given','2018-09-30','order placed',4,'Hyderabad',2500,4500)
+insert into sales_order values('Chinmay','678', '2018-09-27','C001','pqr','25','COD','Invoice Given','2018-11-30','order placed',3,'Kolkata',1000,1200)
+
+select * from sales_order
+
+select * from sales_order where name like '_a%' OR
+select * from sales_order where substring(name,2,1)='a'
+--4
+select * from sales_order where city='Mumbai'
+--5
+select * from sales_order where bal_due>=10000
+--6
+select from sales_order where extract('month' from delv_date)=01
+--7
+select * from sales_order where client_no='C001' or client_no='C002'
+--8
+select * from sales_order where sellingprice>2000 and sellingprice<=5000
+--9
+select order_no,sellingprice*1.5 as "new_price" from sales_order where sellingprice>1500
+--10
+select count(*) from sales_order
+--11
+select avg(sellingprice) from sales_order
+--12
+select min(sellingprice),max(sellingprice) from sales_order
+--13
+select count(*) from sales_order where sellingprice>1500 
+--14
+select order_no,extract(from order_date)from sales_order
+--15
+select to_char(order_date,'dd-mm-yyyy') from sales_order
+--16
+select delv_date as "Delivery Date",to_char(month from delv_date,'day')as "Month" from sales_order
+--17
+select now()::date + 15 OR
+select current_date + 15
+--18
+select extract('day' from age(current_date,delv_date)) from sales_order
+--19
+
+
+

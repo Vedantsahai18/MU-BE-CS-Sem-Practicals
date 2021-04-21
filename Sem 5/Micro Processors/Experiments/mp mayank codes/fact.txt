@@ -1,0 +1,26 @@
+.8086
+.model small
+.data
+num db 05h
+fact db ?
+.code
+fac proc near
+    cmp bl, 01h
+    je one
+bck:mul bl
+    dec bl
+    cmp bl, 01h
+    jne bck
+    ret
+one:ret
+fac endp
+start:
+    mov ax, @data
+    mov ds, ax
+    mov bl, num
+    mov al, 01h
+    call fac
+    mov fact, al
+    mov ah, 4ch
+    int 21h
+end start

@@ -1,0 +1,74 @@
+.8086
+.model small
+
+.data
+msg1 db 'Enter Option $'
+msg2 db '1:Addition  $'
+msg3 db '2:Subtraction $'
+msg4 db '3:Multiplication $'
+msg5 db '4:Division $'
+
+num1 dw 708Ah
+num2 dw 6064h
+
+result1 dw ?
+result2 dw ?
+
+.code
+start:
+mov ax, @data
+mov ds, ax
+
+lea dx, msg2
+mov ah, 09h
+int 21h
+
+lea dx, msg3
+mov ah, 09h
+int 21h
+
+lea dx, msg4
+mov ah, 09h
+int 21h
+
+lea dx, msg5
+mov ah, 09h
+int 21h
+
+lea dx, msg1
+mov ah, 09h
+int 21h
+
+mov ah, 08h
+int 21h
+cmp al, 31h
+jnz next
+	mov ax, num1
+	add ax, num2
+	mov result1, ax
+	jmp exit
+next:cmp al,32h
+jnz next1
+	mov ax, num1
+	sub ax, num2
+	mov result1, ax
+	jmp exit
+next1: cmp al,33h
+jnz next2
+	mov bx, num2
+	mov ax, num1
+	mul bx
+	mov result1, ax
+	mov result2, dx
+	jmp exit
+next2: cmp al,34h
+	mov ax, num1
+	mov bx,num2
+	div bx
+	mov result1,ax
+	mov result2,bx
+	jmp exit
+exit:int 3h
+mov ah,4ch
+int 21h
+end start

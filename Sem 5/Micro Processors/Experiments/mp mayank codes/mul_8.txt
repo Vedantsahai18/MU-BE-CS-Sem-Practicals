@@ -1,0 +1,17 @@
+.8086
+.model small
+.data
+num1 db 09h
+num2 db 04h
+result db ?
+.code
+start:
+    mov ax, @data
+    mov ds, ax
+    mov ah, 00h
+    mov al, num1
+    mul num2
+    mov result, al
+    mov ah, 4ch
+    int 21h
+end start

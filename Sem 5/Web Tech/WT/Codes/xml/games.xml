@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="games.xsl"?>
+<games person="me"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="games.xsd">
+    <game>
+        <title>Days Gone</title>
+        <developer>Sony</developer>
+        <year>2018</year>
+        <price>2500</price>
+    </game>
+    <game>
+        <title>FIFA 20</title>
+        <developer>EA</developer>
+        <year>2019</year>
+        <price>3999</price>
+    </game>
+    <game>
+        <title>PES eFootball 2020</title>
+        <developer>Konami</developer>
+        <year>Elvis</year>
+        <price>3500</price>
+    </game>
+</games>

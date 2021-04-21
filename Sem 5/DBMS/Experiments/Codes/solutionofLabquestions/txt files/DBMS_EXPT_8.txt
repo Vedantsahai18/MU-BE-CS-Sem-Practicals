@@ -1,0 +1,84 @@
+Experiment 8
+Task 1
+1. Write a block to display sum of digits of a three-digit number
+Code :(Using PL/SQL)
+do $$
+<<block1>>
+Declare
+	n int:=534;
+	n1 int;n2 int;n3 int;ans int;
+Begin
+	n1=n/100;
+	n2=(n/10)%10;
+	n3=n%10;
+	ans=n1+n2+n3;
+	Raise Notice 'SUM OF 3 DIGITS OF A 3 DIGIT NUMBER IS=% ',ans;
+end block1 $$;
+
+Output :
+NOTICE:  SUM OF 3 DIGITS OF A 3 DIGIT NUMBER IS=12
+Query returned successfully with no result in 12 ms.
+
+2. Write a block to display square of 1 to 10
+Code :(Using PL/SQL)
+do $$
+<<block2>>
+Declare
+	n int:=1;
+Begin
+	while n<=10
+	loop
+		Raise Notice 'SQUARE OF % number =% ',n,(n*n);
+		n:=n+1;
+	end loop;
+end block2 $$;
+
+Output :
+NOTICE:  SQUARE OF 1 number =1
+NOTICE:  SQUARE OF 2 number =4
+NOTICE:  SQUARE OF 3 number =9
+NOTICE:  SQUARE OF 4 number =16
+NOTICE:  SQUARE OF 5 number =25
+NOTICE:  SQUARE OF 6 number =36
+NOTICE:  SQUARE OF 7 number =49
+NOTICE:  SQUARE OF 8 number =64
+NOTICE:  SQUARE OF 9 number =81
+NOTICE:  SQUARE OF 10 number =100
+
+Query returned successfully with no result in 12 ms.
+3. Write a block to display Fibonacci series upto 8th term (start with 0,1)
+Code:
+do $$
+<<bl>>
+declare
+	count int: =3; f int; s int; t int;
+begin
+	f=0;
+	s=1;
+	Raise Notice 'The Term 1 of Fibonacci series is %',f;
+	Raise Notice 'The Term 2 of Fibonacci series is %',s;
+	t=f+s;
+	Raise Notice 'The Term % of Fibonacci series is %',count,t;
+	count=count+1;
+	while count<=8
+	loop
+		f=s;
+		s=t;
+		t=f+s;
+		Raise Notice 'The Term % of Fibonacci series is %',count,t;
+		count:=count+1;
+	end loop;
+end bl $$;
+
+Output :
+NOTICE:  The Term 1 of Fibonacci series is 0
+NOTICE:  The Term 2 of Fibonacci series is 1
+NOTICE:  The Term 3 of Fibonacci series is 1
+NOTICE:  The Term 4 of Fibonacci series is 2
+NOTICE:  The Term 5 of Fibonacci series is 3
+NOTICE:  The Term 6 of Fibonacci series is 5
+NOTICE:  The Term 7 of Fibonacci series is 8
+NOTICE:  The Term 8 of Fibonacci series is 13
+
+Total query runtime: 16 ms.
+1 row retrieved.

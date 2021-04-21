@@ -1,0 +1,52 @@
+.8086
+.model small
+.data
+s db "hi seaching something$"
+w db "in$"
+found db "Found the string$"
+nfound db "Couldn't find the string$"
+ans db ?
+.code
+start:
+    mov ax, @data
+    mov ds, ax
+    lea si, s
+    lea di, w
+    mov bl, "$"
+    cmp [di], bl
+    je ns
+    cmp [si], bl
+    je ns
+bck:mov al, [si]
+    cmp al, [di]
+    jne ahd
+    inc di
+    inc si
+    cmp [di], bl
+    je fnd
+    cmp [si], bl
+    je ns
+    jmp bck
+ahd:inc si
+    cmp [si], bl
+    je ns
+    lea di, w
+    jmp bck
+fnd:mov ah, 09h
+    lea dx, found
+    int 21h
+    mov ah, 08h
+    int 21h
+    mov al, "Y"
+    mov ans, al
+    jmp nd
+ns: mov ah, 09h
+    lea dx, nfound
+    int 21h
+    mov ah, 08h
+    int 21h
+    mov al, "N"
+    mov ans, al
+nd: mov ah, 4ch
+    int 21h
+end start

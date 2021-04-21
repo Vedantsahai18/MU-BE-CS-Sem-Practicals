@@ -1,0 +1,4 @@
+// Commands to run the code
+#lex alphalex.l
+#cc lex.yy.c
+#./a.out

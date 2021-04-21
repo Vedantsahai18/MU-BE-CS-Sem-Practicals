@@ -1,0 +1,119 @@
+CURRENT DATE AND TIME IS Wed Oct 31 17:03:18 2018
+
+
+Enter the function you wish to perform
+
+****************************************************
+1:INSERT APPOINTMENT
+2:TAKE APPOINTMENT
+3.CANCEL APPOINTMENT
+4.CHECK CURRENT APPOINTMENT
+5.CHECK TIMESLOT AVAILIBILITY
+6:DISPLAY APPOINTMENTS
+7.DISPLAY PATIENT DATABASE
+8.MODIFY PATIENT RECORD
+9.SEARCH THE DATABASE [by name]
+10.SORT DATABASE BY NAME
+11:EXIT
+****************************************************
+
+1
+
+ENTER THE NAME OF  THE PATIENT
+Simran
+ENTER THE AGE OF THE PATIENT
+19
+ENTER TIME FOR AN APPOINTMENT IN HRS AND MINS [24 HR FORMAT]
+14
+50
+APPOINTMENT ADDED!
+ Press ENTER to continue...
+
+1
+
+ENTER THE NAME OF  THE PATIENT
+Arpita
+ENTER THE AGE OF THE PATIENT
+7
+ENTER TIME FOR AN APPOINTMENT IN HRS AND MINS [24 HR FORMAT]
+14
+50
+THERE IS ALREADY AN APPOINTMENT AT THIS TIME
+ Press ENTER to continue...
+
+
+4
+CURRENT APPOINTMENT IS:
+NAME: Simran
+ AGE: 19
+TIME: 14 : 50
+ Press ENTER to continue...
+
+5
+ENTER THE TIME IN HRS AND MIN [24 HR FORMAT]
+14
+50
+THERE IS ALREADY AN APPOINTMENT AT THIS TIME
+ Press ENTER to continue...
+
+6
+*********************************************
+                LIST OF APPOINTMENTS
+*********************************************
+NAME: Simran
+ AGE: 19
+TIME: 14 : 50
+------------------------------------------
+NAME: Arpita
+AGE: 9
+TIME: 17: 30
+------------------------------------------
+ Press ENTER to continue...
+
+3
+ENTER THE NAME OF THE PATIENT
+Arpita
+APPOINTMENT CANCELLED!
+ Press ENTER to continue...
+
+6
+*********************************************
+                LIST OF APPOINTMENTS
+*********************************************
+NAME: Simran
+ AGE: 19
+TIME: 14 : 50
+------------------------------------------
+ Press ENTER to continue...
+
+7
+                LIST OF PATIENTS
+*********************************************
+NAME:         Simran
+AGE:          19
+------------------------------------------
+NAME:         Arpita
+AGE:          9
+------------------------------------------
+ Press ENTER to continue...
+
+2
+CURRENT APPOINTMENT IS
+NAME: Simran
+ AGE: 19
+TIME: 14 : 50
+ENTER THE MEDICINES PRESCRIBED [MAX 20]
+medic
+Enter another medicine? [y/n]
+y
+ENTER THE MEDICINES PRESCRIBED [MAX 20]
+tablet
+Enter another medicine? [y/n]
+y
+ENTER THE MEDICINES PRESCRIBED [MAX 20]
+crocin
+Enter another medicine? [y/n]
+n
+ Press ENTER to continue...
+
+

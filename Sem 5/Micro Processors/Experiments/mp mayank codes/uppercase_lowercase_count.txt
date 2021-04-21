@@ -1,0 +1,29 @@
+.8086
+.model small
+.data
+s db "This Is America$"
+uc db 00h
+lc db 00h
+.code
+start:
+    mov ax, @data
+    mov ds, ax
+    lea si, s
+    mov bl, "$"
+bck:mov al, [si]
+    cmp al, "A"
+    jl ot
+    cmp al, "Z"
+    jg sml
+    inc uc
+sml:cmp al, "a"
+    jl ot
+    cmp al, "z"
+    jg ot
+    inc lc
+ot: inc si
+    cmp bl, [si]
+    jne bck
+    mov ah, 4ch
+    int 21h
+end start

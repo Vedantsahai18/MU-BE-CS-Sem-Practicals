@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>toy list</title>
+        <style>
+            form {
+    background-color:coral;
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 20px 5px black;
+    margin: 0;
+    padding: 10px;
+    width:100%;
+    max-width: 400px;}
+        </style>
+	</head>
+	<body>
+
+		<h1>list of toys</h1>
+		<form>
+            <select id="toys">
+                <option value="None">-- Select--</option>
+                <option value="None">hot wheels</option>
+                <option value="ID001">bay blades</option>
+                <option value="ID002" >remote-control cars</option>
+                <option value="ID003">electric guns</option>
+            </select>
+            <input id="quantity" type="text" placeholder="enter quantity" />
+            <br />
+            <br />
+            <input id="rent" type="text" placeholder="enter rent" />
+            <br />
+            <br />
+            
+            <input class = "submit" type="button"  value="Submit" onclick="bill()" />
+            <p id="result">Here will be your result</p>
+        </form>
+        <script>
+        function bill () {
+            var quan = Number(document.getElementById("quantity").value);
+            var rent = Number(document.getElementById("rent").value);
+            var result =  (quan*rent);
+            document.getElementById("result").innerHTML = "Your bill is : " + result;
+            }
+        </script>
+        </body>

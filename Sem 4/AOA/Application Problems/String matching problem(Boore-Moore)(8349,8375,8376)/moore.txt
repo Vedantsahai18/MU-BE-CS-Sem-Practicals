@@ -1,0 +1,100 @@
+
+/* A set of students attendance is given in each line of file.Compute the no of attendance of a particular student by using an efficient searching algorithm . */
+
+/* This problem is solved using Boore-Moore String matching algorithm.It has a time complexity of O(n+m). */
+# include <limits.h> 
+# include <string.h> 
+# include <stdio.h> 
+# define NO_OF_CHARS 256 
+int count=0;
+int lines=0;
+FILE *fp;
+int max (int a, int b) { return (a > b)? a: b; } 
+
+void badCharHeuristic( char *str, int size,  
+                        int badchar[NO_OF_CHARS]) 
+{ 
+    int i; 
+for (i = 0; i < NO_OF_CHARS; i++) 
+         badchar[i] = -1; 
+  
+ 
+    for (i = 0; i < size; i++) 
+         badchar[(int) str[i]] = i; 
+} 
+  
+void search( char *txt,  char *pat) 
+{   int i=0;
+    int m = strlen(pat); 
+    int n = strlen(txt); 
+  
+    int badchar[NO_OF_CHARS]; 
+  badCharHeuristic(pat, m, badchar); 
+ int s = 0; 
+       while    (s <= (n - m)) 
+    { 
+        int j = m-1; 
+  
+     
+        while(j >= 0 && pat[j] == txt[s+j]) 
+            j--; 
+  
+        if (j < 0) 
+        { 
+             count++;
+            s += (s+m < n)? m-badchar[txt[s+m]] : 1; 
+  
+        } 
+  
+        else
+            s += max(1, j - badchar[txt[s+j]]); 
+
+     
+    } 
+}
+
+void file_reading(char txt[100])
+{
+ 
+    char c;  
+  
+    
+    fp = fopen("document.txt", "r");
+    for (c = getc(fp); c != EOF; c = getc(fp)) 
+        if (c == '\n') 
+            lines = lines + 1; 
+  fclose(fp);   
+}
+  
+
+int main() 
+{   
+    char info[100],pattern[10];Rahul Shreyas Hardik
+
+    char *txt,*pat;
+    char c;
+    int i=0;
+    fp=(FILE *)fopen("document.txt","r");
+    while(!feof(fp))
+    {
+     c=getc(fp);
+     info[i++]=c;
+    }
+    printf("Enter the string to be searched\n");
+    scanf("%s",pattern);
+    txt=info;pat=pattern;
+    search(txt,pat);
+    fclose(fp);
+    file_reading(txt);
+
+    printf("The percentage of attendance of %s is %f",pattern,((float)count*100/lines));
+    return 0;
+}
+
+/*Output:
+ Enter the string to be searched
+Manish
+The percentage of attendance of Manish is 42.857143
+*/
+
+

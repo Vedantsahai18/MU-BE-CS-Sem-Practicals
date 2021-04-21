@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+</head>
+<body align = "center" bgcolor="#EEEEEE">
+    <h1>Blood Donation Camp</h1>
+    <div class="form" align = "center" style="background-color: white;border-radius: 20px;padding: 2px;margin-left: 250px;margin-right: 250px">
+    <form >
+        <p>
+            <label><input type="radio" id="mr" value="Mr" name="title" required >Mr</label>
+            <label><input type="radio" id="ms" value="Ms" name="title" required>Ms</label>
+            <br>
+            <br>
+            <label> Name</label>
+            <br>
+            <input type="text" id="name" placeholder="Name" style="width: 45%" required>
+            <br>
+            <br>
+            <label> Contact</label>
+            <br>
+            <input type="tel" id="contact" placeholder="Contact" style="width: 45%" required>
+            <br>
+            <br>
+            <label> Email</label>
+            <br>
+            <input type="email" id="email" placeholder="Email" style="width: 45%" required>
+            <br>
+            <br>
+            <label> College name</label>
+            <br>
+            <input  type="text" id="college" placeholder="College name" style="width: 45%" required>
+            <br>
+            <br>
+            <label> Password</label>
+            <br>
+            <input type="password" id="password" placeholder="Password"style="width: 45%" required>
+            <br>
+            <br>
+            <label>Year</label>
+            <br>
+            <select required>
+                <option>1st Year</option>
+                <option>2nd Year</option>
+                <option>3rd Year</option>
+                <option>4rd Year</option>
+            </select>
+            <br>
+            <br>
+            <label>Blood Group</label>
+            <br>
+            <select required>
+                    <option>A+</option>
+                    <option>AB+</option>
+                    <option>O-</option>
+                    <option>O+</option>
+                    <option>AB-</option>
+                    <option>AB+</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                </select>
+                <br>
+            <p>In the last 3 days have you taken medication (including Aspirin), other than birth control pills or vitamins?</p>
+            <label><input type="radio" name="choice1" required>Yes</label>
+            <label><input type="radio" name="choice1" required>No</label>
+            <br>
+            <br>
+            <p>In the last 6 months have you taken any of the following medications?</p>
+            <label><input type="radio" name="type" required>Avodart</label>
+            <label><input type="radio" name="type" required>Jalyn</label>
+            <br>
+            <br>
+            <label> Any Requests?</label>
+            <br>
+            <textarea style="height:150px; width:250px"></textarea>
+            <p><input type="checkbox" required id="terms">I agree to all <a href="">Terms and Condions</a></p>
+            <br>
+            <br>
+            <button onclick="checkForm()">Submit</button>
+            <button><a style="text-decoration:none; color: black" href="/login.html">Login</a></button>
+            <button type="reset">Clear</button>
+        </p>
+        
+    </form>
+</div>
+</body>
+<script src="check.js"></script>
+</html>
